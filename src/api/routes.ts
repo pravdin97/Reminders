@@ -3,7 +3,7 @@ import controller from './controller';
 
 const { Router } = express;
 
-const router = new Router({ mergeParams: true });
+const router = new (Router as any)({ mergeParams: true });
 
 router.get('/', controller.getAll);
 router.get('/:id', controller.get);

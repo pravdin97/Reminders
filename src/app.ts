@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
-import initMongo from './src/db/db';
-import apiRoutes from './src/api/routes';
+import initMongo from './db/db';
+import apiRoutes from './api/routes';
 
 const PORT = process.env.PORT || 5000;
 
@@ -24,6 +24,7 @@ async function startApp() {
       console.log(`Server started at port ${PORT}`);
     });
   } catch (error) {
+    // tslint:disable-next-line:no-console
     console.log(error);
   }
 }
